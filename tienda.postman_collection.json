@@ -1,0 +1,332 @@
+{
+	"info": {
+		"_postman_id": "5a96095a-3e3d-402c-ad1f-9abea2c5ee47",
+		"name": "tienda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:9091/products",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9091",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id\": \"\",\r\n        \"name\": \"Carrod e los vengadores\",\r\n        \"descripcion\": \"Juguete Carro de los vengadores\",\r\n        \"precio\": 75000.0,\r\n        \"cantidadMaxima\": 500,\r\n        \"cantidadMinima\": 1,\r\n        \"typeProductEntity\": {\r\n            \"id\": 6,\r\n            \"name\": \"Juguete\",\r\n            \"descripcion\": \"Juguete\"\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9091/products",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9091",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id\": 1,\r\n        \"name\": \"Muñeco Iron Man Pequeño\",\r\n        \"descripcion\": \"Muñeco Iron Man Pequeño articulado\",\r\n        \"precio\": 150000.0,\r\n        \"cantidadMaxima\": 500,\r\n        \"cantidadMinima\": 1,\r\n        \"typeProductEntity\": {\r\n            \"id\": 1,\r\n            \"name\": \"Muñeco Iron Man\",\r\n            \"descripcion\": \"Muñeco Grande Articulado\"\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9091/products",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9091",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "Get All Clients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:9091/clients/getAll",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9091",
+							"path": [
+								"clients",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Client",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Lawrence Montoya Orjuela\",\r\n    \"identificacion\": \"93136770\",\r\n    \"address\": \"calle 130\",\r\n    \"email\": \"lawren_montoya@hotmail.com\",\r\n    \"phone\": \"3214536111\",\r\n    \"typeIdentification\": {\r\n        \"id\": 1,\r\n        \"name\": \"Cedula\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9091/clients",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9091",
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"\",\r\n    \"name\": \"rocky Balboa\",\r\n    \"identificacion\": \"93136771\",\r\n    \"address\": \"calle 131\",\r\n    \"email\": \"rocky@hotmail.com\",\r\n    \"phone\": \"3214536112\",\r\n    \"typeIdentification\": {\r\n        \"id\": 1,\r\n        \"name\": \"Cedula\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9091/clients",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9091",
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Client by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:9091/clients?identification=93136770",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9091",
+							"path": [
+								"clients"
+							],
+							"query": [
+								{
+									"key": "identification",
+									"value": "93136770"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "GetUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"\",\r\n\t\"user\":\"lemo\",\r\n\t\"pass\":\"1425\",\t\r\n\t\"dateCreation\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9091/users",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9091",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Facturas",
+			"item": [
+				{
+					"name": "Create Fact",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"\",\r\n    \"client\": {\r\n         \r\n        \"id\": 2,\r\n        \"name\": \"rocky Balboa\",\r\n        \"identificacion\": \"93136771\",\r\n        \"address\": \"calle 131\",\r\n        \"email\": \"rocky@hotmail.com\",\r\n        \"phone\": \"3214536112\",\r\n        \"typeIdentification\": {\r\n            \"id\": 1,\r\n            \"name\": \"Cedula\"\r\n        }\r\n     \r\n    },\r\n    \"fecha\": \"2021-08-29 02:32:40.463\",\r\n    \"total\": 1245000.0,\r\n    \"detalles\": [\r\n        {\r\n            \"idProducto\": 3,\r\n            \"producto\": \"Vaso Wolverine\",\r\n            \"cantidad\": 23,\r\n            \"precioUnitario\": 45000.0,\r\n            \"total\": 21000.0\r\n        },\r\n        {\r\n            \"idProducto\": 4,\r\n            \"producto\": \"Comic Capitan America I\",\r\n            \"cantidad\": 5,\r\n            \"precioUnitario\": 56000,\r\n            \"total\": 1035000.0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9091/facts",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9091",
+							"path": [
+								"facts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllFActs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:9091/facts?id=1",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9091",
+							"path": [
+								"facts"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TypeIdentification",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:9091/identifications",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9091",
+							"path": [
+								"identifications"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
